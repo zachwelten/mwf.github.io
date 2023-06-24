@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
   <title>Miller's Wood Flooring</title>
@@ -212,7 +213,7 @@
       <p>Miller's Wood Flooring has been proudly serving Ottawa and the surrounding region since 2019. We specialize in new floor installations and restorations. Our skilled team is dedicated to delivering exceptional craftsmanship and customer satisfaction. From a wide range of hardwood options to meticulous restoration services, we provide beautiful and durable flooring solutions. With our professionalism and commitment to quality, Miller's Hardwood Flooring is your trusted partner for stunning hardwood floors.</p>
 
       <div class="container">
-        <form action="send_email.php" method="POST" class="form">
+        <form class="form" id="contact-form">
           <label for="name">Name:</label>
           <input type="text" id="name" name="name" required>
     
@@ -225,7 +226,37 @@
           <button type="submit">Submit</button>
         </form> 
       </div>
-
+      <script>
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+          event.preventDefault();
+    
+          var name = document.getElementById('name').value;
+          var email = document.getElementById('email').value;
+          var message = document.getElementById('message').value;
+    
+          // Create an XMLHttpRequest object
+          var xhr = new XMLHttpRequest();
+    
+          // Configure the POST request
+          xhr.open('POST', 'send_email.php', true);
+          xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+    
+          // Handle the response from the server
+          xhr.onreadystatechange = function() {
+            if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
+              // The email was sent successfully
+              alert('Email sent!');
+              document.getElementById('contact-form').reset();
+            } else if (xhr.readyState === XMLHttpRequest.DONE) {
+              // There was an error sending the email
+              alert('Email sending failed.');
+            }
+          };
+    
+          // Send the form data to the server-side script
+          xhr.send('name=' + encodeURIComponent(name) + '&email=' + encodeURIComponent(email) + '&message=' + encodeURIComponent(message));
+        });
+      </script>
       <footer id="footer">
         <p>Miller's Wood Flooring</p>
         <p>Email: millerswoodflooring@gmail.com</p>
