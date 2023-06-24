@@ -1,190 +1,236 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Miller's Hardwood Flooring</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <title>Miller's Wood Flooring</title>
+  <style>
     
-    <style>
-html, body {
-margin: 0 auto;
+    html, body {
+      margin: 0;
+      padding: 0;
+      
+    }
+    
+    .header {
+      padding: 60px;
+      text-align: center;
+      background: url("banner.jpg") no-repeat;
+      background-size: 100%;
+      color: #000000;
+      font-size: 30px;
+      height: 250px;
+      z-index: 10;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    ul {
+      list-style-type: none;
+      margin: 0 auto;
+      padding: 0;
+      width: 750px;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+    }
+
+    li {
+      float: left;
+    }
+
+    li a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      width: 150px;
+    }
+
+    li a:hover:not(.active) {
+      background-color: #111;
+    }
+
+    .active {
+      color: #000000;
+    }
+    
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      height: 50vh;
+    }
+    
+    .form {
+      position: relative;
+      display: flex;
+      align-items: flex-start;
+      flex-direction: column;
+      gap: 10px;
+      width: 300px;
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 30px 30px -30px rgba(27, 26, 26, 0.315);
+    }
+    
+    .form .title {
+      color: royalblue;
+      font-size: 30px;
+      font-weight: 600;
+      letter-spacing: -1px;
+      line-height: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .form input,
+    .form textarea {
+      outline: 0;
+      border: 1px solid rgb(219, 213, 213);
+      padding: 8px 14px;
+      border-radius: 8px;
+      width: 100%;
+    }
+    
+    .form input {
+      height: 50px;
+    }
+    
+    .form textarea {
+      height: 100px;
+      resize: none;
+    }
+    
+    .form button {
+      align-self: flex-end;
+      padding: 8px;
+      outline: 0;
+      border: 0;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: 500;
+      background-color: royalblue;
+      color: #fff;
+      cursor: pointer;
+    }
+    
+    p {
+      font-size: 20px;
+      text-align: center;
+      width: 100%;
+    }
+    
+    h2 {
+      text-align: center;
+    }
+    
+    .center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 50%;
+    }
+    
+    #page-container {
+      position: relative;
+      min-height: 100vh;
+    }
+    
+    #content-wrap {
+  padding-bottom: 2.5rem; /* Footer height */
+  margin-bottom: 2.5rem; /* Footer height */
+}
+
+#footer {
+  width: 100%;
+  height: 2.5rem; /* Footer height */
 }
     
-.header {
-  padding: 60px;
-  text-align: center;
-  background: url("banner.jpg");
-  background-repeat: no-repeat;
-  background-size: 100%;
-  color: #000000;
-  font-size: 30px;
-  height: 250px;
-  z-index: 10;
-  width: 100%;
-  margin: 0;
-}
-       
-        
-        ul {
-  list-style-type: none;
-  margin: 0 auto;
-  padding: 0;
-  width: 750px;
-  overflow: hidden;
-  
+    @media screen and (max-width: 768px) {
+  .header {
+    padding: 30px;
+    font-size: 24px;
+    height: 200px;
+  }
+
+  ul {
+    max-width: 600px;
+  }
+
+  .box {
+    padding: 8px;
+  }
+
+  .center {
+    width: 70%;
+  }
 }
 
-li {
-  float: left;
-}
+@media screen and (max-width: 480px) {
+  .header {
+    padding: 20px;
+    font-size: 20px;
+    height: 150px;
+  }
 
-li a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  width: 150px;
-}
+  ul {
+    max-width: 400px;
+  }
 
-li a:hover:not(.active) {
-  background-color: #111;
-}
+  .box {
+    padding: 4px;
+  }
 
-.active {
-  color: #000000;
+  .center {
+    width: 80%;
+  }
 }
-.container {
-    display: flex;
-  flex-direction: column;
-  align-items: center;
-  height: 50vh;
-}
-.form {
-  position: relative;
-  display: flex;
-  align-items: flex-start;
-  flex-direction: column;
-  gap: 10px;
-  width: 300px;
-  background-color: white;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 30px 30px -30px rgba(27, 26, 26, 0.315);
-}
-
-.form .title {
-  color: royalblue;
-  font-size: 30px;
-  font-weight: 600;
-  letter-spacing: -1px;
-  line-height: 30px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.form input {
-  outline: 0;
-  border: 1px solid rgb(219, 213, 213);
-  padding: 8px 14px;
-  border-radius: 8px;
-  width: 100%;
-  height: 50px;
-}
-
-.form textarea {
-  border-radius: 8px;
-  height: 100px;
-  width: 100%;
-  resize: none;
-  outline: 0;
-  padding: 8px 14px;
-  border: 1px solid rgb(219, 213, 213);
-}
-
-.form button {
-  align-self: flex-end;
-  padding: 8px;
-  outline: 0;
-  border: 0;
-  border-radius: 8px;
-  font-size: 16px;
-  font-weight: 500;
-  background-color: royalblue;
-  color: #fff;
-  cursor: pointer;
-}
-.box {
-      margin: auto;
-      width: 0 auto;
-      height: 600px;
-      padding: 10px;
-
-  
-}
-p {
-  font-size: 20px;
-  text-align: center;
-  width: 100%;
-}
-
-h2 {text-align: center;}
-.center {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
-}
-.page-container {
-  position: relative;
-  min-height: 100vh;
-}
-
-.content-wrap {
-  padding-bottom: 2.5rem;    /* Footer height */
-}
-
-.footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 2.5rem;            /* Footer height */
-}
-</style>
+  </style>
 </head>
 <body>
   <div id="page-container">
-  <div id="content-wrap">
-<div class="header">
-<h1><img src="logo.png" alt="logo"
-    width="125"
-	height="100"/> Miller's Hardwood Flooring</h1>
-<ul>
-    <li><a href="index.html">Home</a></li>
-    <li><a href="services.html">Services</a></li>
-    <li><a class="active" href="contact.html">Contact</a></li>
-  </ul>
-</div>
+    <div id="content-wrap">
+      <div class="header">
+        <h1>
+          <img src="logo.png" alt="logo" width="125" height="100"/> Miller's Wood Flooring
+        </h1>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a class="active" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
 
-<h2>About Miller's Hardwood Flooring</h2>
-<p>Miller's Hardwood Flooring has been proudly serving Ottawa and the surrounding region since 2019. We specialize in new floor installations and restorations. Our skilled team is dedicated to delivering exceptional craftsmanship and customer satisfaction. From a wide range of hardwood options to meticulous restoration services, we provide beautiful and durable flooring solutions. With our professionalism and commitment to quality, Miller's Hardwood Flooring is your trusted partner for stunning hardwood floors.</p>
-<div class="container">
-<form action="send_email.php" method="post" class="form">
-    <div class="title">Contact us</div>
-    <input type="text" placeholder="Your Name" class="input">
-    <input type="text" placeholder="Your email" class="input">
-    <textarea placeholder="Your message and contact information"></textarea>
-     
-    <button type="submit">Submit</button>
+      <h2>About Miller's Wood Flooring</h2>
+      <p>Miller's Wood Flooring has been proudly serving Ottawa and the surrounding region since 2019. We specialize in new floor installations and restorations. Our skilled team is dedicated to delivering exceptional craftsmanship and customer satisfaction. From a wide range of hardwood options to meticulous restoration services, we provide beautiful and durable flooring solutions. With our professionalism and commitment to quality, Miller's Hardwood Flooring is your trusted partner for stunning hardwood floors.</p>
+
+      <div class="container">
+        <form action="send_email.php" method="POST" class="form">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required>
     
-</form> 
-</div>
-<footer id="footer"><p>Miller's Hardwood Flooring</p>
-  <p>Email: millerswoodflooring@gmail.com</p</footer>
-</div>
-
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
     
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" required></textarea>
+    
+          <button type="submit">Submit</button>
+        </form> 
+      </div>
 
+      <footer id="footer">
+        <p>Miller's Wood Flooring</p>
+        <p>Email: millerswoodflooring@gmail.com</p>
+      </footer>
+    </div>
+  </div>
 </body>
 </html>

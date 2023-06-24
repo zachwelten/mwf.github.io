@@ -1,18 +1,18 @@
 <?php
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-  $name = $_POST['name'];
-  $email = $_POST['email'];
-  $message = $_POST['message'];
-
-  $to = 'zacharywelten@gmail.com';
-  $subject = 'Request From website';
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+  $name = $_POST["name"];
+  $email = $_POST["email"];
+  $message = $_POST["message"];
+  
+  $to = "zacharywelten@gmail.com"; // Replace with your Gmail address
+  $subject = "New Contact Form Submission";
   $body = "Name: $name\nEmail: $email\n\n$message";
-
-  // Send email
-  if (mail($to, $subject, $body)) {
-    echo 'Thank you for your submission.';
+  $headers = "From: $email";
+  
+  if (mail($to, $subject, $body, $headers)) {
+    echo "Email sent successfully!";
   } else {
-    echo 'Sorry, there was a problem sending your message.';
+    echo "Failed to send email. Please try again.";
   }
 }
-?>
+?

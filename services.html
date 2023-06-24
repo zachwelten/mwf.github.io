@@ -3,34 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <title>Miller's Hardwood Flooring</title>
     <style>
 html, body {
-margin: 0 auto;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
 }
- 
+
 .header {
   padding: 60px;
   text-align: center;
-  background: url("banner.jpg");
-  background-repeat: no-repeat;
+  background: url("banner.jpg") no-repeat;
   background-size: 100%;
   color: #000000;
   font-size: 30px;
   height: 250px;
   z-index: 10;
-  width: 100%;
-  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden; /* Added this line */
 }
-       
-        
-        ul {
+
+ul {
   list-style-type: none;
   margin: 0 auto;
   padding: 0;
   width: 750px;
   overflow: hidden;
-  
+  display: flex;
+  justify-content: center;
 }
 
 li {
@@ -53,6 +58,7 @@ li a:hover:not(.active) {
 .active {
   color: #000000;
 }
+
 .button {
   height: 3em;
  width: 8em;
@@ -128,8 +134,45 @@ p {
    color: black;
    text-align: center;
 }
+@media screen and (max-width: 768px) {
+  .header {
+    padding: 30px;
+    font-size: 24px;
+    height: 200px;
+  }
 
+  ul {
+    max-width: 600px;
+  }
 
+  .box {
+    padding: 8px;
+  }
+
+  .center {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .header {
+    padding: 20px;
+    font-size: 20px;
+    height: 150px;
+  }
+
+  ul {
+    max-width: 400px;
+  }
+
+  .box {
+    padding: 4px;
+  }
+
+  .center {
+    width: 80%;
+  }
+}
 </style>
 </head>
 <body>
@@ -137,7 +180,7 @@ p {
 <div class="header">
 <h1><img src="logo.png" alt="logo"
     width="125"
-	height="100"/> Miller's Hardwood Flooring</h1>
+	height="100"/> Miller's Wood Flooring</h1>
 <ul>
     <li><a href="index.html">Home</a></li>
     <li><a class="active" href="services.html">Services</a></li>
@@ -146,7 +189,7 @@ p {
   </ul>
 </div>
 
-  <p>At Miller's Hardwood Flooring, we specialize in professional hardwood floor installation and resurfacing services that transform your space with timeless elegance and natural beauty. Our experienced team of flooring experts follows a meticulous process to ensure a flawless installation that exceeds your expectations.</p>
+  <p>At Miller's Wood Flooring, we specialize in professional hardwood floor installation and resurfacing services that transform your space with timeless elegance and natural beauty. Our experienced team of flooring experts follows a meticulous process to ensure a flawless installation that exceeds your expectations.</p>
 <div class="button-container">
   <button class="button" onclick="toggleText('text1')">New Flooring</button>
   <button class="button" onclick="toggleText('text2')">Refinishing</button>
@@ -173,7 +216,7 @@ p {
             <h3> Client Satisfaction:</h3>
             <p>Your satisfaction is our top priority. We encourage you to walk through the finished project with our team, addressing any questions or concerns you may have. We take pride in delivering exceptional craftsmanship and strive to ensure your complete satisfaction with your new hardwood floors.</p>
         
-        <p>Experience the unmatched beauty and durability of hardwood floors installed by Miller's Hardwood Flooring. Contact us today to schedule a consultation and let our experts bring your vision to life.
+        <p>Experience the unmatched beauty and durability of hardwood floors installed by Miller's Wood Flooring. Contact us today to schedule a consultation and let our experts bring your vision to life.
         </p>
   </div>
   
@@ -204,7 +247,7 @@ p {
                     <h3>Client Satisfaction:</h3>
                 <p>Your satisfaction is our ultimate goal. We encourage you to review the resurfaced hardwood floors and provide feedback. We take pride in delivering exceptional craftsmanship and strive to ensure your complete satisfaction with our hardwood floor resurfacing services.</p>
                 
-                    <p>Experience the transformation of your worn-out hardwood floors with Miller's Hardwood Flooring professional resurfacing expertise. Contact us today to schedule a consultation and let our skilled team revive the natural beauty of your hardwood surfaces.</p>
+                    <p>Experience the transformation of your worn-out hardwood floors with Miller's Wood Flooring professional resurfacing expertise. Contact us today to schedule a consultation and let our skilled team revive the natural beauty of your hardwood surfaces.</p>
   </div>
   <div class="embedsocial-hashtag" data-ref="6c94d2740067676162b70d30230860e48c12c9e8"> 
     <a class="feed-powered-by-es feed-powered-by-es-feed-new" href="https://embedsocial.com/social-media-aggregator/" target="_blank" title="Widget by EmbedSocial">  </a> </div>

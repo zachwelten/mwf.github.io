@@ -1,36 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Miller's Hardwood Flooring</title>
-    <style>
-html, body {
-margin: 0 auto;
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <title>Miller's Wood Flooring</title>
+  <style>
+    html, body {
+  margin: 0;
+  padding: 0;
 }
-    
+
 .header {
   padding: 60px;
   text-align: center;
-  background: url("banner.jpg");
-  background-repeat: no-repeat;
+  background: url("banner.jpg") no-repeat;
   background-size: 100%;
   color: #000000;
   font-size: 30px;
   height: 250px;
   z-index: 10;
-  width: 100%;
-  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
 }
-       
-        
-        ul {
+
+ul {
   list-style-type: none;
   margin: 0 auto;
   padding: 0;
-  width: 750px;
+  max-width: 750px;
   overflow: hidden;
-  
+  display: flex;
+  justify-content: center;
 }
 
 li {
@@ -55,92 +59,123 @@ li a:hover:not(.active) {
 }
 
 .box {
-      margin: auto;
-      width: 0 auto;
-      height: 600px;
-      padding: 10px;
-
-  
+  margin: auto;
+  max-width: 800px;
+  padding: 10px;
 }
+
 p {
   font-size: 20px;
   text-align: center;
-  width: 100%;
 }
+
 .center {
   display: block;
   margin-left: auto;
   margin-right: auto;
   width: 50%;
+  max-width: 400px;
 }
-.page-container {
+
+#page-container {
   position: relative;
   min-height: 100vh;
 }
 
-.content-wrap {
-  padding-bottom: 2.5rem;    /* Footer height */
+#content-wrap {
+  padding-bottom: 2.5rem;
 }
 
 .footer {
   position: absolute;
   bottom: 0;
   width: 100%;
-  height: 2.5rem;            /* Footer height */
+  height: 2.5rem;
 }
-</style>
+
+@media screen and (max-width: 768px) {
+  .header {
+    padding: 30px;
+    font-size: 24px;
+    height: 200px;
+  }
+
+  ul {
+    max-width: 600px;
+  }
+
+  .box {
+    padding: 8px;
+  }
+
+  .center {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .header {
+    padding: 20px;
+    font-size: 20px;
+    height: 150px;
+  }
+
+  ul {
+    max-width: 400px;
+  }
+
+  .box {
+    padding: 4px;
+  }
+
+  .center {
+    width: 80%;
+  }
+}
+
+  </style>
+  
 </head>
 <body>
   <div id="page-container">
-  <div id="content-wrap">
-<div class="header">
-<h1><img src="logo.png" alt="logo"
-    width="125"
-	height="100"/> Miller's Hardwood Flooring</h1>
-<ul>
-    <li><a class="active" href="index.html">Home</a></li>
-    <li><a href="services.html">Services</a></li>
-    <li><a href="contact.html">Contact</a></li>
+    <div id="content-wrap">
+      <header class="header">
+        <h1><img src="logo.png" alt="logo" width="125" height="100"/> Miller's Wood Flooring</h1>
+        <ul>
+          <li><a class="active" href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </header>
+
+      <div class="box">  
+        <p>Welcome to Miller's Wood Flooring, where we specialize in breathing new life into hardwood floors through our expert resurfacing services.
+          With our skilled team and attention to detail, we transform worn-out floors into stunning masterpieces that enhance the beauty of your space.</p>
     
-  </ul>
-</div>
-
-
-  <div class="box">  
-            <p style="color:rgb(5, 5, 5)"><strong>Welcome to Miller's Hardwood Flooring, where we specialize in breathing new life into hardwood floors through our expert resurfacing services.
-               With our skilled team and attention to detail, we transform worn-out floors into stunning masterpieces that enhance the beauty of your space.</strong></p>
-    
-                <p style="color:rgb(5, 5, 5)"><strong>From scratches and stains to signs of wear, our hardwood floor resurfacing process is designed to revitalize your floors, restoring their natural elegance and charm. 
-                Our experienced professionals assess the condition of your floors, providing personalized solutions tailored to your needs and preferences.</strong></p>
-                
-               <p style="color:rgb(5, 5, 5)"><strong> Along with our vast range of experience and using state-of-the-art equipment and techniques, we refinish your older
-                worn out floors, or perhaps you may just want to replace it completely. Miller's Hardwood Flooring has all of your hardwood flooring needs covered!
-               </strong></p>
-                
-                <p style="color:rgb(5, 5, 5)"><strong>At Miller's Hardwood Flooring, we believe in the power of exceptional craftsmanship. We take pride in every project we undertake, ensuring meticulous attention to detail and delivering results that exceed your expectations. 
-                Our commitment to quality extends to our choice of eco-friendly products and practices, ensuring a sustainable and healthy environment.</strong></p>
-                
-                <p style="color:rgb(5, 5, 5)"><strong>Miller's Hardwood Flooring has been serving Ottawa and region since 2019 and customer satisfaction is at the heart of our business. We strive to provide exceptional customer service, from the initial consultation to the final inspection. 
-                We work closely with you, listening to your vision and providing expert guidance to bring your hardwood floor dreams to life.</strong></p>
-                
-                <p style="color:rgb(5, 5, 5)"><strong> Discover the transformational possibilities of hardwood floor resurfacing with Miller's Hardwood Flooring. 
-                Whether it's a residential or commercial space, our team is ready to showcase our expertise, professionalism, and dedication to delivering the highest quality results.</strong></p>
-                
-                <p style="color:rgb(5, 5, 5)"><strong>Contact us today to schedule a consultation and let us uncover the hidden beauty of your hardwood floors.</strong></p>   
-</div>
-
-<div> 
-  <img src="sanding.png" alt="Sanding and refinishing" class="center">
-
-</div>
-
+        <p>From scratches and stains to signs of wear, our hardwood floor resurfacing process is designed to revitalize your floors, restoring their natural elegance and charm. 
+          Our experienced professionals assess the condition of your floors, providing personalized solutions tailored to your needs and preferences.</p>
         
-</div>
-<footer id="footer"><p>Miller's Hardwood Flooring</p>
-  <p>Email: millerswoodflooring@gmail.com</p</footer>
-</div>
-  
-    
+        <p>Along with our vast range of experience and using state-of-the-art equipment and techniques, we refinish your older worn-out floors, or perhaps you may just want to replace it completely. Miller's Hardwood Flooring has all of your hardwood flooring needs covered!</p>
+        
+        <p>At Miller's Wood Flooring, we believe in the power of exceptional craftsmanship. We take pride in every project we undertake, ensuring meticulous attention to detail and delivering results that exceed your expectations. 
+          Our commitment to quality extends to our choice of eco-friendly products and practices, ensuring a sustainable and healthy environment.</p>
+        
+        <p>Miller's Wood Flooring has been serving Ottawa and the region since 2019, and customer satisfaction is at the heart of our business. We strive to provide exceptional customer service, from the initial consultation to the final inspection. 
+          We work closely with you, listening to your vision and providing expert guidance to bring your hardwood floor dreams to life.</p>
+        
+        <p>Discover the transformational possibilities of hardwood floor resurfacing with Miller's Wood Flooring. 
+          Whether it's a residential or commercial space, our team is ready to showcase our expertise, professionalism, and dedication to delivering the highest quality results.</p>
+        
+        <p>Contact us today to schedule a consultation and let us uncover the hidden beauty of your hardwood floors.</p>   
+      </div>
 
-</body>
-</html>
+      <div> 
+        <img src="sanding.png" alt="Sanding and refinishing" class="center">
+      </div>
+    </div>
+
+    <footer class="footer">
+      <p>Miller's Wood Flooring</p>
+      <p>Email: millerswoodflooring@gmail.com</p>
+    </footer>
+  </div
